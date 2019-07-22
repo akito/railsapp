@@ -1,0 +1,12 @@
+<h1>Sessions#new</h1>
+<%= form_with scope: :session, local: true do |f| %>
+  <div>
+    <%= f.label :email, 'Mail Address' %>
+    <%= f.text_field :email, id: 'session_email' %>
+  </div>
+  <div>
+    <%= f.label :password, 'Password' %>
+    <%= f.password_field :password, id: 'session_password' %>
+  </div>
+  <%= f.submit 'login' %>
+<% end %>
