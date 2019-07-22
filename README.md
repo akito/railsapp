@@ -7,4 +7,4 @@
 - [gemを利用せずにログイン・ログアウト機能を実装](https://github.com/akito/railsapp/pull/3)
 
 ## その他
-= [ルートパスを変更](https://github.com/akito/railsapp/commit/4aff18d2c509ef1c468c2d32168a6d0280db6342)
+- [ルートパスを変更](https://github.com/akito/railsapp/commit/4aff18d2c509ef1c468c2d32168a6d0280db6342)
