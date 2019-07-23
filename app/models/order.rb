@@ -11,4 +11,12 @@ class Order < ApplicationRecord
   def total
     order_items.map(&:total).sum
   end
+
+  def refundable?
+    charge_id? && ! refunded?
+  end
+
+  def refunded?
+    state === 'refunded'
+  end
 end

@@ -10,5 +10,9 @@ Rails.application.routes.draw do
     resource :checkout
   end
   resources :order_items
-  resources :orders
+  resources :orders do
+    member do
+      put :refund
+    end
+  end
 end
