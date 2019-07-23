@@ -11,4 +11,4 @@ class CheckoutsController <  ApplicationController
   def require_nonempty_card!
     redirect_to cart_path if current_cart.order_items.none?
   end
-endt
+end
