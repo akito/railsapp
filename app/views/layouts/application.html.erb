@@ -4,9 +4,13 @@
     <title>Railsapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="stripe-key" content="<%= Rails.application.credentials.stripe_public_key %>">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'application', 'https://js.stripe.com/v3/', 'data-turbolinks-track': 'reload' %>
+    <script src="https://js.stripe.com/v3/"></script>
+    <%= javascript_pack_tag    'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://js.stripe.com/v3/"></script>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -15,6 +19,9 @@
     <% else %>
       <%=  link_to 'login', login_path %>
     <% end %>
+    <%= link_to 'Products', products_path %>
+    <%= link_to 'Shopping Cart', cart_path %>
+    <%= link_to 'Order', orders_path %>
     <%= yield %>
   </body>
 </html>
