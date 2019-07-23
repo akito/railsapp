@@ -49,6 +49,10 @@ document.addEventListener("turbolinks:load", () => {
 
   const form = document.getElementById('payment-form');
   if (form === null){ return }
+
+  form.addEventListener('ajax:beforeSend', function (event) {
+    event.preventDefault()
+  })
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
