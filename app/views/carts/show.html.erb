@@ -1,0 +1,21 @@
+<h1>Shopping Cart</h1>
+<% current_cart.order_items.includes(:product).each do |order_item| %>
+  <div>
+    <%= link_to order_item.product.name, order_item.product %>
+  </div>
+
+  <div>
+    <%= form_with model: order_item do |form| %>
+      <%= form.number_field :quantity %>
+      <%= form.button 'update' %>
+    <% end %>
+  </div>
+  <div>
+    <%= number_to_currency order_item.total / 100.0 %>
+  </div>
+<% end %>
+
+<div>
+  <strong>Total:</strong>
+  <%= number_to_currency current_cart.total / 100.0 %>
+</div>

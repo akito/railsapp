@@ -7,4 +7,8 @@ class Order < ApplicationRecord
   scope :shipped, -> { where(state: :shipped)}
   scope :complete, -> { where(state: :complete)}
   scope :refunded, -> { where(state: :refunded)}
+
+  def total
+    order_items.map(&:total).sum
+  end
 end
