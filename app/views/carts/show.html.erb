@@ -19,3 +19,7 @@
   <strong>Total:</strong>
   <%= number_to_currency current_cart.total / 100.0 %>
 </div>
+
+<div>
+  <%= link_to 'checkout', cart_checkout_path %>
+</div>
