@@ -1,0 +1,4 @@
+<h1>Order #<%= @order.id %></h1>
+<%= number_to_currency @order.total / 100.0 %>
+
+<%= link_to "View Receipt", order_path(@order, format: :pdf) %>

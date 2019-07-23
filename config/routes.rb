@@ -4,4 +4,15 @@ Rails.application.routes.draw do
   get :login, to: 'sessions#new'
   post :login, to: 'sessions#create'
   delete :logout, to: 'sessions#destroy'
+
+  resources :products
+  resource :cart do
+    resource :checkout
+  end
+  resources :order_items
+  resources :orders do
+    member do
+      put :refund
+    end
+  end
 end

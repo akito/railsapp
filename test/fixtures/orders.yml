@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  state: MyString
+  carge_id: MyString
+  card_brand: MyString
+  card_last4: MyString
+  card_exp_month: MyString
+  card_exp_year: MyString
+
+two:
+  user: two
+  state: MyString
+  carge_id: MyString
+  card_brand: MyString
+  card_last4: MyString
+  card_exp_month: MyString
+  card_exp_year: MyString
