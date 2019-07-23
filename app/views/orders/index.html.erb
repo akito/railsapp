@@ -2,7 +2,7 @@
 
 <% @orders.each do |order| %>
   <div>
-    <%= order.id %>:
+    <%= link_to "Order ##{order.id}", order  %>:
     <%= order.state %>:
     <%= link_to 'refund', refund_order_path(order), method: :put if order.refundable? %>
   </div>

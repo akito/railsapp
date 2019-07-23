@@ -14,6 +14,7 @@ class CheckoutsController <  ApplicationController
     current_cart.update(
       charge_id: charge.id,
       state: :paid,
+      paid_at: Time.zone.now,
       card_brand: charge.source.brand,
       card_last4: charge.source.last4,
       card_exp_month: charge.source.exp_month,
